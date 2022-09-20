@@ -1,0 +1,52 @@
+1. Write a JavaScript function to generate an array between two integers of 1 step length.
+
+Input :
+console.log(range(3, 7));
+Expected Output:
+[3,4, 5, 6, 7]
+
+Input :
+console.log(range(-4, 7));
+Expected Output:
+[-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+
+
+//to create array between a,b range
+    
+function range(a,b)//a,b parameters for range of array
+{
+  var arr=[];//created an empty array
+  for(var i=a;i<=b;i++)//to iterate an array
+  arr.push(i);//pushing i upto b into arr
+  return arr;//the function returns arr
+  
+}
+console.log(range(-4,7));//calling range function and displaying the result
+
+
+
+
+var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];//created an array
+function fre(arr1){//passing a to find a most repeated element in an array
+  var s,t="",m=0,item=0;
+  //this loop for iterate arr1
+  for(var i=0;i<arr1.length;i++)
+ { 
+  //this iteration for arr1[i] element compare with all j elements of arr1
+  for(var j=0;j<arr1.length;j++)
+   if(arr1[i]===arr1[j])//checking equality of arr1[i],arr1[j]
+  s++;//s value is increased by 1 till condition true.
+ if(m<s)//checking m is greater than s
+{ 
+ m=s;//if true m value replaced by s 
+ item=arr1[i];//arr1[i] assinged to item
+ }
+ 
+ s=0;//to initiate s, otherwise s get added to it old value.
+}
+
+  t=item+" "+ "("+" "+" "+m+" "+"times"+" "+")";//assign a & s to t using concatenation
+
+return t ;//fre function returns t
+}
+console.log(fre([3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3]));//calling fre function and display the result
